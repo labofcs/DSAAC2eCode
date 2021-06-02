@@ -1,0 +1,12 @@
+gcc HelloWorld.c -E -o HelloWorld.i 预处理：加入头文件，替换宏。
+gcc HelloWorld.c -s -c HelloWorld.s 编译：包含预处理，将 C 程序转换成汇编程序。
+gcc HelloWorld.c -c HelloWorld.o 汇编：包含预处理和编译，将汇编程序转换成可链接的二进制程序。
+gcc HelloWorld.c -o HelloWorld 链接：包含以上所有操作，将可链接的二进制程序和其它别的库链接在一起，形成可执行的程序文件。
+
+
+程序编译过程填坑 源文件生成预处理文件： 
+gcc -E HelloWorld.c -o HelloWorld.i 预处理文件生成编译文件： 
+gcc -S HelloWorld.i -o HelloWorld.s 编译文件生成汇编文件： 
+gcc -c HelloWorld.s -o HelloWorld.o 汇编文件生成可执行文件：
+gcc HelloWorld.o -o HelloWorld 源文件生成可执行文件：
+gcc HelloWorld.c -o HelloWorld Linux系统运行可执行文件：./HelloWorld
